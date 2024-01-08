@@ -13,10 +13,10 @@
         <input type="number" id="num2" class="col-form-label mt-4" placeholder="Enter Second Number"><br>
 
         <div class = "mt-4">
-        <button onclick="my_add()" class="btn btn-primary">Add Button</button>
-        <button onclick="my_sub()" class="btn btn-primary">Sub Button</button>
-        <button onclick="my_mult()" class="btn btn-primary">Mult Button</button>
-        <button onclick="my_div()" class="btn btn-primary">Div Button</button>
+        <button id="add" class="btn btn-primary">Add Button</button>
+        <button id="sub" class="btn btn-primary">Sub Button</button>
+        <button id="mult" class="btn btn-primary">Mult Button</button>
+        <button id="div" class="btn btn-primary">Div Button</button>
         </div>
         <div id="result" class="mt-4">
             <h2> Result:</h2>
@@ -26,33 +26,65 @@
         var a;
         var b;
 
-        function my_add(){
-        a = document.getElementById("num1").value
-        b = document.getElementById("num2").value
-        var z = Number(a) + Number(b);
-        document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
-
-        }
         
-        function my_sub(){
+
+        var c = document.getElementById("add").addEventListener("click", (e)=>{
             a = document.getElementById("num1").value
             b = document.getElementById("num2").value
-            var z =  Number(a) - Number(b);
+            var z = Number(a) + Number(b);
             document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
-           }
-        function my_mult(){
+        })
+        
+
+        var f = document.getElementById("sub").addEventListener("click", (e)=>{
             a = document.getElementById("num1").value
             b = document.getElementById("num2").value
-            var z =  Number(a) * Number(b);
+            var z = Number(a) - Number(b);
+            document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        })
+
+        var g = document.getElementById("mult").addEventListener("click", (e)=>{
+            a = document.getElementById("num1").value
+            b = document.getElementById("num2").value
+            var z = Number(a) * Number(b);
+            document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        })
+
+
+        var h = document.getElementById("div").addEventListener("click", (e)=>{
+            a = document.getElementById("num1").value
+            b = document.getElementById("num2").value
+            var z = Number(a) / Number(b);
+            document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        })
+
+        // function my_add(){
+        // a = document.getElementById("num1").value
+        // b = document.getElementById("num2").value
+        // var z = Number(a) + Number(b);
+        // document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+
+        // }
+        
+        // function my_sub(){
+        //     a = document.getElementById("num1").value
+        //     b = document.getElementById("num2").value
+        //     var z =  Number(a) - Number(b);
+        //     document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        //    }
+        // function my_mult(){
+        //     a = document.getElementById("num1").value
+        //     b = document.getElementById("num2").value
+        //     var z =  Number(a) * Number(b);
             
-            document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
-           }
-        function my_div(){
-            a = document.getElementById("num1").value
-            b = document.getElementById("num2").value
-            var z =  Number(a) / Number(b);
-            document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
-           }
+        //     document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        //    }
+        // function my_div(){
+        //     a = document.getElementById("num1").value
+        //     b = document.getElementById("num2").value
+        //     var z =  Number(a) / Number(b);
+        //     document.getElementById("result").innerHTML = "<h2>" + "Result: " +  z + "</h2>";
+        //    }
 
 
            
